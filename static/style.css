@@ -1,0 +1,3069 @@
+/* ============================================================
+   SHERLOCK CYBER INTELLIGENCE SYSTEM
+   GLASS / GLOW / ORBIT UI
+============================================================ */
+
+
+/* ============================================================
+   RESET
+============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        #020711;
+
+    color: white;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* ============================================================
+   REAL BACKGROUND IMAGE
+============================================================ */
+
+.background-layer {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -10;
+
+    background-image:
+        url("/static/assets/sherlock-cyber-background.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    transform: scale(1.03);
+
+    filter:
+        saturate(1.15)
+        brightness(.75);
+
+}
+
+
+/* ============================================================
+   BACKGROUND VIGNETTE
+============================================================ */
+
+.background-vignette {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -9;
+
+    pointer-events: none;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 42%,
+            transparent 0%,
+            rgba(1,6,15,.12) 40%,
+            rgba(1,5,13,.70) 100%
+        );
+
+}
+
+
+/* ============================================================
+   ATMOSPHERIC GLOW
+============================================================ */
+
+.background-glow {
+
+    position: fixed;
+
+    width: 600px;
+    height: 600px;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    opacity: .25;
+
+    pointer-events: none;
+
+    z-index: -8;
+
+}
+
+
+.glow-left {
+
+    left: -250px;
+    top: 15%;
+
+    background:
+        rgba(0,150,255,.45);
+
+}
+
+
+.glow-right {
+
+    right: -250px;
+    top: 45%;
+
+    background:
+        rgba(0,230,255,.35);
+
+}
+
+
+/* ============================================================
+   PARTICLES
+============================================================ */
+
+.particles {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -5;
+
+    overflow: hidden;
+
+}
+
+
+.particles span {
+
+    position: absolute;
+
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: #62eaff;
+
+    box-shadow:
+        0 0 8px #62eaff,
+        0 0 18px rgba(40,220,255,.7);
+
+    opacity: .65;
+
+    animation:
+        particleFloat
+        linear
+        infinite;
+
+}
+
+
+.particles span:nth-child(1) {
+    left: 7%;
+    top: 20%;
+    animation-duration: 12s;
+}
+
+
+.particles span:nth-child(2) {
+    left: 17%;
+    top: 70%;
+    animation-duration: 17s;
+}
+
+
+.particles span:nth-child(3) {
+    left: 28%;
+    top: 30%;
+    animation-duration: 14s;
+}
+
+
+.particles span:nth-child(4) {
+    left: 38%;
+    top: 80%;
+    animation-duration: 19s;
+}
+
+
+.particles span:nth-child(5) {
+    left: 48%;
+    top: 15%;
+    animation-duration: 15s;
+}
+
+
+.particles span:nth-child(6) {
+    left: 58%;
+    top: 65%;
+    animation-duration: 20s;
+}
+
+
+.particles span:nth-child(7) {
+    left: 68%;
+    top: 25%;
+    animation-duration: 16s;
+}
+
+
+.particles span:nth-child(8) {
+    left: 78%;
+    top: 75%;
+    animation-duration: 13s;
+}
+
+
+.particles span:nth-child(9) {
+    left: 88%;
+    top: 35%;
+    animation-duration: 18s;
+}
+
+
+.particles span:nth-child(10) {
+    left: 92%;
+    top: 65%;
+    animation-duration: 14s;
+}
+
+
+.particles span:nth-child(11) {
+    left: 13%;
+    top: 48%;
+    animation-duration: 21s;
+}
+
+
+.particles span:nth-child(12) {
+    left: 32%;
+    top: 55%;
+    animation-duration: 16s;
+}
+
+
+.particles span:nth-child(13) {
+    left: 53%;
+    top: 45%;
+    animation-duration: 18s;
+}
+
+
+.particles span:nth-child(14) {
+    left: 73%;
+    top: 52%;
+    animation-duration: 15s;
+}
+
+
+.particles span:nth-child(15) {
+    left: 84%;
+    top: 15%;
+    animation-duration: 22s;
+}
+
+
+.particles span:nth-child(16) {
+    left: 45%;
+    top: 90%;
+    animation-duration: 17s;
+}
+
+
+.particles span:nth-child(17) {
+    left: 25%;
+    top: 10%;
+    animation-duration: 19s;
+}
+
+
+.particles span:nth-child(18) {
+    left: 65%;
+    top: 90%;
+    animation-duration: 14s;
+}
+
+
+@keyframes particleFloat {
+
+    0% {
+        transform:
+            translateY(30px)
+            scale(.7);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: .7;
+    }
+
+    50% {
+        transform:
+            translateY(-40px)
+            scale(1.3);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-120px)
+            scale(.5);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* ============================================================
+   GLASS SYSTEM
+============================================================ */
+
+.glass-panel {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(12,28,46,.54),
+            rgba(4,13,25,.35)
+        );
+
+    border:
+
+        1px solid
+        rgba(99,221,255,.15);
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.07),
+
+        0 20px 80px
+        rgba(0,0,0,.35),
+
+        0 0 45px
+        rgba(0,190,255,.05);
+
+    backdrop-filter:
+        blur(22px)
+        saturate(140%);
+
+    -webkit-backdrop-filter:
+        blur(22px)
+        saturate(140%);
+
+}
+
+
+/* ============================================================
+   TOPBAR
+============================================================ */
+
+.topbar {
+
+    position: fixed;
+
+    top: 20px;
+    left: 30px;
+    right: 30px;
+
+    height: 70px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    z-index: 100;
+
+}
+
+
+.nav-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+}
+
+
+.nav-logo {
+
+    width: 42px;
+    height: 42px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 0 12px
+            rgba(66,221,255,.7)
+        );
+
+}
+
+
+.nav-title {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.nav-title strong {
+
+    font-size: 16px;
+
+    letter-spacing: 4px;
+
+}
+
+
+.nav-title small {
+
+    margin-top: 3px;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color:
+        rgba(130,205,225,.55);
+
+}
+
+
+.system-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(180,220,230,.65);
+
+}
+
+
+.status-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.status-dot {
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #48e7c3;
+
+    box-shadow:
+        0 0 10px #48e7c3;
+
+    animation:
+        statusPulse
+        1.5s
+        infinite;
+
+}
+
+
+@keyframes statusPulse {
+
+    50% {
+        opacity: .35;
+        transform: scale(.65);
+    }
+
+}
+
+
+.status-divider {
+
+    height: 20px;
+
+    width: 1px;
+
+    background:
+        rgba(100,210,235,.16);
+
+}
+
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding:
+        130px 30px 100px;
+
+}
+
+
+.hero-content {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-direction: column;
+
+}
+
+
+/* ============================================================
+   BADGE
+============================================================ */
+
+.glass-chip {
+
+    background:
+        rgba(7,25,39,.40);
+
+    border:
+        1px solid
+        rgba(71,210,245,.25);
+
+    backdrop-filter:
+        blur(15px);
+
+}
+
+
+.hero-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        11px 22px;
+
+    border-radius: 50px;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color:
+        rgba(190,235,245,.75);
+
+    box-shadow:
+        0 0 30px
+        rgba(0,200,255,.08);
+
+    animation:
+        badgeAppear
+        1s
+        ease both;
+
+}
+
+
+.badge-pulse {
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #56e7ff;
+
+    box-shadow:
+        0 0 12px #56e7ff;
+
+    animation:
+        statusPulse
+        1.2s
+        infinite;
+
+}
+
+
+@keyframes badgeAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ============================================================
+   HERO LOGO CIRCULAR STAGE
+============================================================ */
+
+.hero-logo-stage {
+
+    position: relative;
+
+    width: 470px;
+    height: 470px;
+
+    margin-top: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    isolation: isolate;
+
+}
+
+
+/* BIG AURA */
+
+.hero-energy {
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(42,210,255,.28),
+            rgba(20,110,255,.10) 45%,
+            transparent 72%
+        );
+
+    filter:
+        blur(25px);
+
+    animation:
+        energyPulse
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes energyPulse {
+
+    0%,
+    100% {
+        transform: scale(.88);
+        opacity: .55;
+    }
+
+    50% {
+        transform: scale(1.18);
+        opacity: 1;
+    }
+
+}
+
+
+/* ============================================================
+   ORBITS
+============================================================ */
+
+.hero-orbit {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+}
+
+
+.hero-orbit-one {
+
+    width: 400px;
+    height: 400px;
+
+    border:
+        1px solid
+        rgba(70,220,255,.34);
+
+    box-shadow:
+        0 0 20px
+        rgba(0,210,255,.08);
+
+    animation:
+        orbitRotate
+        14s
+        linear
+        infinite;
+
+}
+
+
+.hero-orbit-two {
+
+    width: 450px;
+    height: 450px;
+
+    border:
+        1px dashed
+        rgba(70,180,255,.24);
+
+    animation:
+        orbitRotateReverse
+        22s
+        linear
+        infinite;
+
+}
+
+
+.hero-orbit-three {
+
+    width: 340px;
+    height: 340px;
+
+    border:
+        1px solid
+        rgba(90,230,255,.20);
+
+    animation:
+        orbitRotate
+        9s
+        linear
+        infinite;
+
+}
+
+
+@keyframes orbitRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+@keyframes orbitRotateReverse {
+
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+
+}
+
+
+/* ============================================================
+   HERO LOGO
+============================================================ */
+
+.hero-logo {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 285px;
+    height: 285px;
+
+    object-fit: contain;
+
+    filter:
+
+        drop-shadow(
+            0 0 8px
+            rgba(70,225,255,.85)
+        )
+
+        drop-shadow(
+            0 0 30px
+            rgba(30,185,255,.75)
+        )
+
+        drop-shadow(
+            0 0 70px
+            rgba(30,160,255,.35)
+        );
+
+    animation:
+        logoFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes logoFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(-10px)
+            scale(1.035);
+    }
+
+}
+
+
+/* ============================================================
+   SCAN RING
+============================================================ */
+
+.hero-scan {
+
+    position: absolute;
+
+    width: 390px;
+    height: 390px;
+
+    border-radius: 50%;
+
+    border:
+        2px solid
+        transparent;
+
+    border-top-color:
+        rgba(92,235,255,.85);
+
+    border-right-color:
+        rgba(92,235,255,.20);
+
+    z-index: 4;
+
+    animation:
+        scanRotate
+        4s
+        linear
+        infinite;
+
+}
+
+
+@keyframes scanRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* ============================================================
+   ORBIT DOTS
+============================================================ */
+
+.hero-orbit-dot {
+
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #61edff;
+
+    box-shadow:
+        0 0 12px #61edff,
+        0 0 30px #21cfff;
+
+}
+
+
+.hero-dot-one {
+
+    top: 38px;
+    right: 75px;
+
+    animation:
+        dotOrbit
+        7s
+        linear
+        infinite;
+
+}
+
+
+.hero-dot-two {
+
+    bottom: 50px;
+    left: 65px;
+
+    animation:
+        dotOrbitReverse
+        11s
+        linear
+        infinite;
+
+}
+
+
+@keyframes dotOrbit {
+
+    from {
+        transform: rotate(0deg) translateX(180px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(180px) rotate(-360deg);
+    }
+
+}
+
+
+@keyframes dotOrbitReverse {
+
+    from {
+        transform: rotate(360deg) translateX(155px) rotate(-360deg);
+    }
+
+    to {
+        transform: rotate(0deg) translateX(155px) rotate(0deg);
+    }
+
+}
+
+
+/* ============================================================
+   HUGE WORDMARK
+============================================================ */
+
+.hero-wordmark-wrap {
+
+    position: relative;
+
+    width: min(1100px, 92vw);
+
+    margin-top: -20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.hero-wordmark-glow {
+
+    position: absolute;
+
+    width: 75%;
+
+    height: 100px;
+
+    background:
+        rgba(50,210,255,.28);
+
+    filter:
+        blur(60px);
+
+    animation:
+        wordGlow
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes wordGlow {
+
+    0%,
+    100% {
+        opacity: .45;
+        transform: scaleX(.82);
+    }
+
+    50% {
+        opacity: .9;
+        transform: scaleX(1);
+    }
+
+}
+
+
+.hero-wordmark {
+
+    position: relative;
+
+    z-index: 2;
+
+    /* VERY LARGE */
+
+    width: min(820px, 88vw);
+
+    max-height: 230px;
+
+    object-fit: contain;
+
+    filter:
+
+        drop-shadow(
+            0 0 5px
+            rgba(255,255,255,.95)
+        )
+
+        drop-shadow(
+            0 0 18px
+            rgba(90,220,255,.95)
+        )
+
+        drop-shadow(
+            0 0 50px
+            rgba(40,190,255,.75)
+        )
+
+        drop-shadow(
+            0 0 90px
+            rgba(30,150,255,.35)
+        );
+
+    animation:
+        wordmarkAppear
+        1.2s
+        cubic-bezier(.2,.8,.2,1)
+        both;
+
+}
+
+
+@keyframes wordmarkAppear {
+
+    from {
+        opacity: 0;
+        transform:
+            scale(.75)
+            translateY(20px);
+        filter:
+            blur(12px)
+            drop-shadow(0 0 0 transparent);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            scale(1)
+            translateY(0);
+    }
+
+}
+
+
+/* ============================================================
+   HERO TEXT
+============================================================ */
+
+.hero-subtitle {
+
+    margin-top: 18px;
+
+    font-size: 11px;
+
+    letter-spacing: 8px;
+
+    color:
+        rgba(190,230,240,.72);
+
+}
+
+
+.hero-subtitle span {
+
+    color:
+        #54ddff;
+
+    text-shadow:
+        0 0 12px #54ddff;
+
+}
+
+
+.hero-description {
+
+    max-width: 650px;
+
+    margin-top: 20px;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+
+    color:
+        rgba(190,220,230,.55);
+
+}
+
+
+/* ============================================================
+   BUTTON
+============================================================ */
+
+.glass-button {
+
+    border:
+        1px solid
+        rgba(90,220,255,.28);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(40,150,200,.25),
+            rgba(8,28,48,.50)
+        );
+
+    backdrop-filter:
+        blur(20px);
+
+}
+
+
+.enter-button {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 35px;
+
+    padding:
+        17px 28px;
+
+    border-radius: 15px;
+
+    color: white;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 30px
+        rgba(0,190,255,.08);
+
+    transition:
+        .35s ease;
+
+}
+
+
+.enter-button::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            100deg,
+            transparent,
+            rgba(100,235,255,.18),
+            transparent
+        );
+
+    transform:
+        translateX(-100%);
+
+    transition:
+        .6s ease;
+
+}
+
+
+.enter-button:hover::before {
+
+    transform:
+        translateX(100%);
+
+}
+
+
+.enter-button:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(80,225,255,.65);
+
+    box-shadow:
+        0 0 30px
+        rgba(0,210,255,.25),
+        inset 0 0 20px
+        rgba(0,210,255,.06);
+
+}
+
+
+.button-search {
+
+    font-size: 23px;
+
+}
+
+
+.button-arrow {
+
+    font-size: 18px;
+
+    color:
+        #55ddff;
+
+}
+
+
+.hero-system-line {
+
+    margin-top: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+    color:
+        rgba(130,210,225,.38);
+
+}
+
+
+.hero-system-line span {
+
+    width: 35px;
+
+    height: 1px;
+
+    background:
+        rgba(70,220,255,.25);
+
+}
+
+
+/* ============================================================
+   ANALYZER SECTION
+============================================================ */
+
+.analyzer-section {
+
+    min-height: 100vh;
+
+    padding:
+        130px 7vw;
+
+}
+
+
+.section-heading {
+
+    max-width: 800px;
+
+    margin:
+        0 auto 60px;
+
+    text-align: center;
+
+}
+
+
+.section-kicker {
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color:
+        #4fdcff;
+
+}
+
+
+.section-heading h1 {
+
+    margin-top: 15px;
+
+    font-size:
+        clamp(45px, 6vw, 80px);
+
+    letter-spacing: 5px;
+
+}
+
+
+.section-heading h1 span {
+
+    color:
+        #54ddff;
+
+    text-shadow:
+        0 0 30px
+        rgba(60,215,255,.35);
+
+}
+
+
+.section-heading p {
+
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color:
+        rgba(190,220,230,.55);
+
+}
+
+
+/* ============================================================
+   ANALYSIS INTERFACE
+============================================================ */
+
+.analysis-interface {
+
+    max-width: 1300px;
+
+    min-height: 540px;
+
+    margin:
+        auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+}
+
+
+/* ============================================================
+   LEFT ANALYSIS VISUAL
+============================================================ */
+
+.analysis-visual {
+
+    position: relative;
+
+    min-height: 540px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.analysis-glow {
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(40,210,255,.20);
+
+    filter:
+        blur(80px);
+
+    animation:
+        energyPulse
+        4s
+        infinite;
+
+}
+
+
+.scanner-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(80,210,255,.05) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(80,210,255,.05) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        35px 35px;
+
+    mask-image:
+        radial-gradient(
+            circle,
+            black,
+            transparent 75%
+        );
+
+}
+
+
+/* ============================================================
+   ANALYSIS RINGS
+============================================================ */
+
+.analysis-ring {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(60,220,255,.25);
+
+}
+
+
+.ring-a {
+
+    width: 300px;
+    height: 300px;
+
+    animation:
+        orbitRotate
+        12s
+        linear
+        infinite;
+
+}
+
+
+.ring-b {
+
+    width: 380px;
+    height: 380px;
+
+    border-style: dashed;
+
+    animation:
+        orbitRotateReverse
+        18s
+        linear
+        infinite;
+
+}
+
+
+.ring-c {
+
+    width: 440px;
+    height: 440px;
+
+    border-color:
+        rgba(80,200,255,.10);
+
+    animation:
+        orbitRotate
+        28s
+        linear
+        infinite;
+
+}
+
+
+/* ============================================================
+   ANALYSIS LOGO
+============================================================ */
+
+.analysis-logo-container {
+
+    position: relative;
+
+    width: 230px;
+    height: 230px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 5;
+
+}
+
+
+.analysis-logo-aura {
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(50,220,255,.25),
+            transparent 70%
+        );
+
+    filter:
+        blur(20px);
+
+}
+
+
+.analysis-logo {
+
+    width: 190px;
+    height: 190px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 0 15px
+            rgba(50,220,255,.9)
+        )
+
+        drop-shadow(
+            0 0 50px
+            rgba(30,180,255,.55)
+        );
+
+    animation:
+        logoFloat
+        5s
+        infinite;
+
+}
+
+
+/* ============================================================
+   SCAN LINE
+============================================================ */
+
+.scan-line {
+
+    position: absolute;
+
+    left: 12%;
+    right: 12%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #57eaff,
+            transparent
+        );
+
+    box-shadow:
+        0 0 15px
+        #57eaff;
+
+    animation:
+        scannerMove
+        3.2s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes scannerMove {
+
+    0% {
+        transform:
+            translateY(-220px);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(220px);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* ============================================================
+   ANALYSIS LABEL
+============================================================ */
+
+.analysis-label {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color:
+        rgba(170,220,230,.55);
+
+}
+
+
+.live-dot {
+
+    display: inline-block;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    margin-right: 8px;
+
+    background:
+        #52e7ff;
+
+    box-shadow:
+        0 0 12px
+        #52e7ff;
+
+    animation:
+        statusPulse
+        1.2s
+        infinite;
+
+}
+
+
+/* ============================================================
+   ANALYSIS PANEL
+============================================================ */
+
+.analysis-panel {
+
+    padding: 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background:
+        rgba(2,13,24,.25);
+
+    border-left:
+        1px solid
+        rgba(90,220,255,.10);
+
+}
+
+
+.panel-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 45px;
+
+}
+
+
+.panel-number {
+
+    margin-right: 15px;
+
+    color:
+        #52dcff;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.panel-title {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+}
+
+
+.panel-status {
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color:
+        #4de7c4;
+
+}
+
+
+/* ============================================================
+   INPUT
+============================================================ */
+
+.analysis-panel label {
+
+    margin-bottom: 12px;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color:
+        rgba(190,220,230,.5);
+
+}
+
+
+.glass-input {
+
+    display: flex;
+
+    align-items: center;
+
+    height: 65px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid
+        rgba(80,215,255,.18);
+
+    background:
+        rgba(4,20,32,.45);
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255,255,255,.04);
+
+    transition:
+        .3s ease;
+
+}
+
+
+.glass-input:focus-within {
+
+    border-color:
+        rgba(75,225,255,.65);
+
+    box-shadow:
+
+        0 0 25px
+        rgba(40,210,255,.10),
+
+        inset 0 0 20px
+        rgba(40,210,255,.04);
+
+}
+
+
+.input-prefix {
+
+    padding-left: 20px;
+
+    color:
+        #53ddff;
+
+    font-size: 22px;
+
+}
+
+
+.glass-input input {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background:
+        transparent;
+
+    padding:
+        0 20px;
+
+    color:
+        white;
+
+    font-size: 13px;
+
+}
+
+
+.glass-input input::placeholder {
+
+    color:
+        rgba(180,220,230,.25);
+
+    letter-spacing: 2px;
+
+}
+
+
+/* ============================================================
+   HINTS
+============================================================ */
+
+.input-hints {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 12px;
+
+}
+
+
+.input-hints span {
+
+    padding:
+        6px 10px;
+
+    border-radius: 6px;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(130,210,225,.5);
+
+    background:
+        rgba(60,190,220,.05);
+
+    border:
+        1px solid
+        rgba(70,200,225,.08);
+
+}
+
+
+/* ============================================================
+   ANALYZE BUTTON
+============================================================ */
+
+.analyze-button {
+
+    position: relative;
+
+    height: 65px;
+
+    margin-top: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    border:
+        1px solid
+        rgba(70,225,255,.38);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(25,150,200,.22),
+            rgba(5,35,55,.55)
+        );
+
+    color: white;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition:
+        .35s ease;
+
+}
+
+
+.analyze-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(80,230,255,.8);
+
+    box-shadow:
+        0 0 30px
+        rgba(30,210,255,.18);
+
+}
+
+
+.analyze-button-glow {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            100deg,
+            transparent,
+            rgba(100,240,255,.18),
+            transparent
+        );
+
+    transform:
+        translateX(-100%);
+
+    animation:
+        buttonSweep
+        3s
+        infinite;
+
+}
+
+
+@keyframes buttonSweep {
+
+    0%,
+    50% {
+        transform:
+            translateX(-100%);
+    }
+
+    75%,
+    100% {
+        transform:
+            translateX(100%);
+    }
+
+}
+
+
+.analyze-icon {
+
+    font-size: 23px;
+
+    color:
+        #55ddff;
+
+}
+
+
+.analyze-arrow {
+
+    color:
+        #55ddff;
+
+    font-size: 18px;
+
+}
+
+
+/* ============================================================
+   ENGINE INFO
+============================================================ */
+
+.engine-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(150,210,220,.38);
+
+}
+
+
+.info-dot {
+
+    display: inline-block;
+
+    width: 5px;
+    height: 5px;
+
+    margin-right: 6px;
+
+    border-radius: 50%;
+
+    background:
+        #48dfff;
+
+    box-shadow:
+        0 0 8px
+        #48dfff;
+
+}
+
+
+/* ============================================================
+   RESULT
+============================================================ */
+
+.result-container {
+
+    max-width: 1300px;
+
+    margin:
+        40px auto 0;
+
+    padding:
+        35px;
+
+    border-radius: 25px;
+
+}
+
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+.result-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 25px;
+
+    border-bottom:
+        1px solid
+        rgba(90,210,235,.10);
+
+}
+
+
+.result-kicker {
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color:
+        #53ddff;
+
+}
+
+
+.result-header h2 {
+
+    margin-top: 10px;
+
+    font-size: 28px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.result-status {
+
+    padding:
+        8px 15px;
+
+    border-radius: 20px;
+
+    color:
+        #55e8c8;
+
+    background:
+        rgba(50,220,180,.05);
+
+    border:
+        1px solid
+        rgba(50,220,180,.18);
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.result-content {
+
+    padding-top: 25px;
+
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.footer {
+
+    margin:
+        30px;
+
+    min-height: 65px;
+
+    padding:
+        0 25px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(150,210,220,.38);
+
+}
+
+
+/* ============================================================
+   INTRO LOADER
+============================================================ */
+
+.intro-loader {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        #020711;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+
+}
+
+
+.intro-loader.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+}
+
+
+.loader-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("/static/assets/sherlock-cyber-background.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    filter:
+        brightness(.45)
+        saturate(1.2);
+
+}
+
+
+.loader-background::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(10,60,90,.18),
+            rgba(1,6,14,.85)
+        );
+
+}
+
+
+.loader-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.loader-system {
+
+    font-size: 8px;
+
+    letter-spacing: 5px;
+
+    color:
+        rgba(140,220,235,.55);
+
+}
+
+
+.loader-system span {
+
+    display: inline-block;
+
+    width: 6px;
+    height: 6px;
+
+    margin-right: 8px;
+
+    border-radius: 50%;
+
+    background:
+        #55eaff;
+
+    box-shadow:
+        0 0 15px
+        #55eaff;
+
+    animation:
+        statusPulse
+        1s
+        infinite;
+
+}
+
+
+/* ============================================================
+   LOADER LOGO
+============================================================ */
+
+.loader-logo-stage {
+
+    position: relative;
+
+    width: 420px;
+    height: 420px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 25px;
+
+}
+
+
+.loader-logo {
+
+    width: 250px;
+    height: 250px;
+
+    object-fit: contain;
+
+    z-index: 5;
+
+    filter:
+
+        drop-shadow(
+            0 0 12px
+            rgba(80,230,255,1)
+        )
+
+        drop-shadow(
+            0 0 45px
+            rgba(30,190,255,.8)
+        )
+
+        drop-shadow(
+            0 0 90px
+            rgba(30,150,255,.45)
+        );
+
+    animation:
+        loaderLogoFloat
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes loaderLogoFloat {
+
+    0%,
+    100% {
+        transform:
+            scale(.95)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            scale(1.06)
+            translateY(-8px);
+    }
+
+}
+
+
+/* ============================================================
+   LOADER ORBITS
+============================================================ */
+
+.orbit {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+}
+
+
+.orbit-outer {
+
+    width: 410px;
+    height: 410px;
+
+    border:
+        1px solid
+        rgba(65,215,255,.25);
+
+    border-top-color:
+        rgba(70,230,255,.9);
+
+    animation:
+        orbitRotate
+        6s
+        linear
+        infinite;
+
+}
+
+
+.orbit-middle {
+
+    width: 340px;
+    height: 340px;
+
+    border:
+        1px dashed
+        rgba(70,205,255,.30);
+
+    animation:
+        orbitRotateReverse
+        9s
+        linear
+        infinite;
+
+}
+
+
+.orbit-inner {
+
+    width: 285px;
+    height: 285px;
+
+    border:
+        1px solid
+        rgba(80,225,255,.25);
+
+    border-right-color:
+        rgba(80,225,255,.8);
+
+    animation:
+        orbitRotate
+        4s
+        linear
+        infinite;
+
+}
+
+
+.loader-energy {
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(50,220,255,.30),
+            transparent 70%
+        );
+
+    filter:
+        blur(30px);
+
+    animation:
+        energyPulse
+        2.5s
+        infinite;
+
+}
+
+
+.loader-scan-ring {
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    border-radius: 50%;
+
+    border:
+        2px solid
+        transparent;
+
+    border-left-color:
+        #56eaff;
+
+    border-bottom-color:
+        rgba(70,220,255,.25);
+
+    animation:
+        orbitRotate
+        3s
+        linear
+        infinite;
+
+}
+
+
+.orbit-dot {
+
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background:
+        #5deaff;
+
+    box-shadow:
+        0 0 15px
+        #5deaff;
+
+}
+
+
+.dot-one {
+
+    animation:
+        loaderDotOne
+        5s
+        linear
+        infinite;
+
+}
+
+
+.dot-two {
+
+    animation:
+        loaderDotTwo
+        7s
+        linear
+        infinite;
+
+}
+
+
+.dot-three {
+
+    animation:
+        loaderDotThree
+        9s
+        linear
+        infinite;
+
+}
+
+
+@keyframes loaderDotOne {
+
+    from {
+        transform:
+            rotate(0deg)
+            translateX(205px);
+    }
+
+    to {
+        transform:
+            rotate(360deg)
+            translateX(205px);
+    }
+
+}
+
+
+@keyframes loaderDotTwo {
+
+    from {
+        transform:
+            rotate(360deg)
+            translateX(170px);
+    }
+
+    to {
+        transform:
+            rotate(0deg)
+            translateX(170px);
+    }
+
+}
+
+
+@keyframes loaderDotThree {
+
+    from {
+        transform:
+            rotate(0deg)
+            translateX(145px);
+    }
+
+    to {
+        transform:
+            rotate(360deg)
+            translateX(145px);
+    }
+
+}
+
+
+/* ============================================================
+   LOADER WORDMARK
+============================================================ */
+
+.loader-wordmark-wrap {
+
+    position: relative;
+
+    width:
+        min(800px, 90vw);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: -15px;
+
+}
+
+
+.wordmark-aura {
+
+    position: absolute;
+
+    width: 70%;
+
+    height: 70px;
+
+    background:
+        rgba(50,220,255,.35);
+
+    filter:
+        blur(45px);
+
+    animation:
+        wordGlow
+        2.5s
+        infinite;
+
+}
+
+
+.loader-wordmark {
+
+    position: relative;
+
+    z-index: 3;
+
+    width:
+        min(700px, 82vw);
+
+    max-height: 190px;
+
+    object-fit: contain;
+
+    filter:
+
+        drop-shadow(
+            0 0 7px
+            white
+        )
+
+        drop-shadow(
+            0 0 22px
+            rgba(70,225,255,1)
+        )
+
+        drop-shadow(
+            0 0 60px
+            rgba(40,190,255,.75)
+        );
+
+}
+
+
+/* ============================================================
+   LOADER TEXT
+============================================================ */
+
+.loader-tagline {
+
+    margin-top: 15px;
+
+    font-size: 9px;
+
+    letter-spacing: 7px;
+
+    color:
+        rgba(200,230,240,.65);
+
+}
+
+
+.loader-progress {
+
+    width:
+        min(380px, 70vw);
+
+    height: 2px;
+
+    margin-top: 30px;
+
+    overflow: hidden;
+
+    background:
+        rgba(100,220,255,.08);
+
+}
+
+
+.loader-progress-bar {
+
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #54eaff,
+            white,
+            #54eaff
+        );
+
+    box-shadow:
+        0 0 15px
+        #54eaff;
+
+    animation:
+        loadingProgress
+        3.2s
+        ease-in-out
+        forwards;
+
+}
+
+
+@keyframes loadingProgress {
+
+    0% {
+        width: 0%;
+    }
+
+    40% {
+        width: 42%;
+    }
+
+    75% {
+        width: 78%;
+    }
+
+    100% {
+        width: 100%;
+    }
+
+}
+
+
+.loader-status {
+
+    margin-top: 15px;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+    color:
+        rgba(150,210,225,.38);
+
+    animation:
+        statusBlink
+        1.5s
+        infinite;
+
+}
+
+
+@keyframes statusBlink {
+
+    50% {
+        opacity: .35;
+    }
+
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 900px) {
+
+    .system-status {
+        display: none;
+    }
+
+
+    .topbar {
+        left: 15px;
+        right: 15px;
+    }
+
+
+    .hero-logo-stage {
+        width: 350px;
+        height: 350px;
+    }
+
+
+    .hero-orbit-one {
+        width: 320px;
+        height: 320px;
+    }
+
+
+    .hero-orbit-two {
+        width: 350px;
+        height: 350px;
+    }
+
+
+    .hero-orbit-three {
+        width: 275px;
+        height: 275px;
+    }
+
+
+    .hero-logo {
+        width: 220px;
+        height: 220px;
+    }
+
+
+    .hero-wordmark {
+        width: 92vw;
+    }
+
+
+    .analysis-interface {
+        grid-template-columns: 1fr;
+    }
+
+
+    .analysis-panel {
+        border-left: none;
+        border-top:
+            1px solid
+            rgba(90,220,255,.10);
+    }
+
+
+    .footer {
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .hero-logo-stage {
+        width: 300px;
+        height: 300px;
+    }
+
+
+    .hero-logo {
+        width: 180px;
+        height: 180px;
+    }
+
+
+    .hero-orbit-one {
+        width: 280px;
+        height: 280px;
+    }
+
+
+    .hero-orbit-two {
+        width: 300px;
+        height: 300px;
+    }
+
+
+    .hero-orbit-three {
+        width: 235px;
+        height: 235px;
+    }
+
+
+    .analysis-panel {
+        padding: 30px 20px;
+    }
+
+
+    .analysis-visual {
+        min-height: 400px;
+    }
+
+
+    .ring-a {
+        width: 230px;
+        height: 230px;
+    }
+
+
+    .ring-b {
+        width: 290px;
+        height: 290px;
+    }
+
+
+    .ring-c {
+        width: 340px;
+        height: 340px;
+    }
+
+
+    .analysis-logo {
+        width: 150px;
+        height: 150px;
+    }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.001ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        scroll-behavior:
+            auto !important;
+
+    }
+
+}
